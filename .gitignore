@@ -1,0 +1,32 @@
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Large Model Weights (>100MB exceeds GitHub limit)
+models/*.keras
+models/*.h5
+!models/.gitkeep
+
+# Datasets
+data/
+datasets/
+
+# System & Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.bak
+
+# Scratch & logs
+scratch/
+*.log

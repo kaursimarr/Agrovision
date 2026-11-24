@@ -1,0 +1,5 @@
+Model,Test accuracy,Precision (macro),Recall (macro),F1 (macro),F1 (weighted),Top-3 accuracy,Params (M),Size (MB),Inference (ms/img),Epochs run,Train time (min)
+Custom CNN (from scratch),0.9022,0.8973,0.9144,0.898,0.9019,0.9887,1.25,15.2,2.2,20,81.3
+Vision Transformer (ViT from scratch),0.9389,0.9295,0.9438,0.9345,0.9388,0.9935,0.68,8.4,0.8,20,15.3
+MobileNetV2 (transfer learning),0.9506,0.9509,0.9527,0.9503,0.9499,0.9948,2.31,22.3,2.1,13,11.8
+ResNet50 (transfer learning),0.9743,0.9738,0.9758,0.9743,0.9743,0.9981,23.67,211.4,5.1,13,31.1
