@@ -8,13 +8,15 @@ AGROVISION is a production-grade AI agricultural diagnostic console powered by d
 
 ## ⚡ Quick Start for Teammates (No Training Required!)
 
-You **do not need to train the models** or download full datasets to run the application on your computer.
+You **do not need to train the models** or download any external dataset. The 4 trained models (**ViT, ResNet50, MobileNetV2, and Custom CNN**) are tracked and stored directly in this repository using **Git LFS**!
 
 ### 1. Clone the repository
 ```bash
+# Make sure git lfs is enabled (run once: git lfs install)
 git clone https://github.com/kaursimarr/Agrovision.git
 cd Agrovision
 ```
+*(If the model files in `models/*.keras` are small pointer files, simply run `git lfs pull` to download the weights).*
 
 ### 2. Set up the virtual environment
 **Windows (PowerShell):**
@@ -31,24 +33,11 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Add the Trained Model Weights (`models/`)
-> [!IMPORTANT]
-> GitHub enforces a strict **100 MB per-file limit**. Because `resnet50.keras` is ~201 MB, the `.keras` model weights are excluded from Git via `.gitignore`. 
-> All benchmark metrics, history curves, and class mappings (`outputs/`) are already included in this repository.
-
-To enable inference, copy the 4 pre-trained model files into the `models/` directory:
-- `models/vit.keras` (~8.4 MB)
-- `models/mobilenetv2.keras` (~22.3 MB)
-- `models/cnn.keras` (~15.2 MB)
-- `models/resnet50.keras` (~201.4 MB)
-
-*(You can obtain these from your team's shared Google Drive or extract them from the Kaggle `results.zip` output).*
-
-### 4. Launch the Dashboard
+### 3. Launch the Dashboard
 ```bash
 streamlit run app.py
 ```
-Open **http://localhost:8501** in your browser.
+Open **http://localhost:8501** in your browser. All 4 deep learning models will load automatically!
 
 ---
 
